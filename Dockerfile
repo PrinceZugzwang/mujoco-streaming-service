@@ -46,4 +46,4 @@ ENV MUJOCO_GL=osmesa
 
 
 # Run the application
-ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["python", "main.py"]
