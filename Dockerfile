@@ -44,9 +44,6 @@ ENV PYTHONUNBUFFERED=1
 # Try EGL first (best for headless servers), fallback to OSMesa
 ENV MUJOCO_GL=osmesa
 
-# Add a startup script to test GL backends
-COPY docker-entrypoint.sh /docker-entrypoint.sh
-RUN chmod +x /docker-entrypoint.sh
 
 # Run the application
 ENTRYPOINT ["/docker-entrypoint.sh"]
